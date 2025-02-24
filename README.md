@@ -2,7 +2,13 @@
  Application to convert Pokemon Trading Card Game Decklists to a Tabletop Simulator importable deck face image
 
  To use the application paste into the dialog box a text decklist of deck of the format: 
+ 
  "Number of cards" "Card name" "Set Code" "Collection Number"
+
+ This type of decklist can be found at places like "limitlesstcg.com"
+
+
+ 
 
  The application will output a .jpg file of the card images. This will be imported into TTS using the "Object>Component>Card>Custom Deck"
 
