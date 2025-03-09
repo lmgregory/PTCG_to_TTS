@@ -3,7 +3,6 @@ import pokemonio_conversion
 import api_call
 import image_download
 import os
-import shutil
 
 input_filename = 'input.txt'  # Input text file
 output_filename = 'cleaned.txt'  # The output file to save the cleaned content
@@ -33,9 +32,4 @@ for link in image_urls:
     i = i + 1
 
 import deck_generator
-
-# Cleaning up the working directory
-os.remove("input.txt")
-os.remove("cleaned.txt")
-shutil.rmtree("cards")
-
+import cleanup

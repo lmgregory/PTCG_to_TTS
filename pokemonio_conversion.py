@@ -11,12 +11,15 @@ def process_file(file_path):
             parts = line.split(' ')
             
             name = parts[1]
-
+            
             # If the card name is longer than 1 word
             name_length = len(parts) - 3
             if name_length > 1:
                 for x in range(name_length-1):
-                    name = name + " " + parts[x+2]
+                    name = " ".join([name, parts[x+2]])
+            
+            translation_table = dict.fromkeys(map(ord, '\/:*?"<>|'), None)
+            name = name.translate(translation_table)
 
             # Accounting for strange set code for promo cards
             set_code = parts[len(parts)-2]
